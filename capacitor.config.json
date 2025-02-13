@@ -1,0 +1,35 @@
+{
+  "appId": "com.pediinfus.app",
+  "appName": "PediInfus",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "backgroundColor": "#F3F4F6",
+      "androidSplashResourceName": "splash",
+      "androidScaleType": "CENTER_CROP",
+      "showSpinner": true,
+      "spinnerColor": "#4F46E5",
+      "iosSpinnerStyle": "small",
+      "androidSpinnerStyle": "small",
+      "splashFullScreen": true,
+      "splashImmersive": true
+    },
+    "Keyboard": {
+      "resize": "body",
+      "style": "dark",
+      "resizeOnFullScreen": true
+    },
+    "App": {
+      "backgroundColor": "#F3F4F6"
+    },
+    "StatusBar": {
+      "style": "dark",
+      "backgroundColor": "#F3F4F6",
+      "overlaysWebView": false
+    }
+  }
+}

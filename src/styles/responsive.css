@@ -1,0 +1,122 @@
+/* Base responsive styles */
+@layer utilities {
+  /* Mobile-first approach */
+  .responsive-container {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Text responsiveness */
+  .responsive-text-xs {
+    @apply text-xs sm:text-sm;
+  }
+
+  .responsive-text-sm {
+    @apply text-sm sm:text-base;
+  }
+
+  .responsive-text-base {
+    @apply text-base sm:text-lg;
+  }
+
+  .responsive-text-lg {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
+
+  /* Mobile optimizations */
+  .mobile-optimized-table {
+    @apply w-full;
+  }
+
+  .mobile-optimized-table thead {
+    @apply hidden md:table-header-group;
+  }
+
+  .mobile-optimized-table tbody {
+    @apply block md:table-row-group;
+  }
+
+  .mobile-optimized-table tr {
+    @apply block md:table-row;
+  }
+
+  .mobile-optimized-table td {
+    @apply block md:table-cell;
+    @apply py-2 px-3 md:py-3 md:px-4;
+    @apply border-b md:border-b-0;
+  }
+
+  .mobile-optimized-table td::before {
+    content: attr(data-label);
+    @apply block md:hidden font-medium mb-1;
+  }
+
+  /* Touch-friendly inputs */
+  .touch-friendly-input {
+    @apply h-12 md:h-10;
+    @apply text-base md:text-sm;
+    @apply px-4;
+    @apply rounded-lg;
+  }
+
+  /* Card layouts */
+  .responsive-card {
+    @apply rounded-lg shadow-md overflow-hidden;
+    @apply bg-white;
+    @apply p-4 sm:p-6;
+  }
+
+  /* Grid layouts */
+  .responsive-grid {
+    @apply grid;
+    @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+    @apply gap-4 sm:gap-6;
+  }
+
+  /* Navigation */
+  .mobile-nav {
+    @apply fixed bottom-0 left-0 right-0 md:relative;
+    @apply bg-white md:bg-transparent;
+    @apply shadow-lg md:shadow-none;
+    @apply z-50;
+  }
+
+  /* Performance optimizations */
+  .optimize-paint {
+    @apply transform-gpu;
+    @apply will-change-transform;
+  }
+
+  .optimize-animation {
+    @apply transition-transform;
+    @apply duration-200;
+    @apply ease-in-out;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-friendly {
+    @apply text-black;
+    @apply bg-white;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .dark-mode-support {
+    @apply bg-gray-900;
+    @apply text-white;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .high-contrast-support {
+    @apply text-black;
+    @apply bg-white;
+  }
+}
